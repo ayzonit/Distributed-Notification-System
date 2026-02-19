@@ -2,6 +2,7 @@ package com.project.notification_service.service.cache;
 
 import com.project.notification_service.ApiClient.UserServiceClient;
 import com.project.shared.events.NotificationChannel;
+import com.project.shared.events.NotificationPriority;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class UserPreferenceCacheService {
@@ -44,7 +46,7 @@ public class UserPreferenceCacheService {
         }
     }
 
-    public void savePreferences(String userId, List<NotificationChannel> preferences) {
+    public void savePreferences(String userId, Map<NotificationPriority, List<NotificationChannel>> preferences) {
         redisTemplate.opsForValue().set(KEY_PREFIX + userId, preferences);
     }
 
