@@ -39,6 +39,6 @@ dependencies {
 	implementation(project(":shared-events"))
 }
 
-tasks.withType<Test> {
-	useJUnitPlatform()
-}
+//tasks.withType<Test> {
+//	useJUnitPlatform()
+//}

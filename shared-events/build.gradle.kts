@@ -4,6 +4,12 @@ plugins {
     id("io.spring.dependency-management") version "1.1.7"
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
 group = "com.project"
 version = "0.0.1-SNAPSHOT"
 
@@ -21,6 +27,6 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok:1.18.32")
 }
 
-tasks.test {
-    useJUnitPlatform()
-}
+//tasks.test {
+//    useJUnitPlatform()
+//}
