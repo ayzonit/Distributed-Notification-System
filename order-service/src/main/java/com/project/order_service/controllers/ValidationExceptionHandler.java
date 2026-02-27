@@ -1,6 +1,6 @@
 package com.project.order_service.controllers;
 
-import com.project.order_service.payload.OrderResponse;
+import com.project.order_service.payload.ApiResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -15,12 +15,12 @@ import java.util.Map;
 @ControllerAdvice
 public class ValidationExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<OrderResponse> handleValidationExceptions(MethodArgumentNotValidException m) {
+    public ResponseEntity<ApiResponse> handleValidationExceptions(MethodArgumentNotValidException m) {
         Map<String, String> errors = new HashMap<>();
         for (FieldError error : m.getBindingResult().getFieldErrors()) {
             errors.put(error.getField(), error.getDefaultMessage());
         }
-        OrderResponse orderResponse = new OrderResponse(false, "Validation failed", errors);
-        return new ResponseEntity<>(orderResponse, HttpStatus.BAD_REQUEST);
+        ApiResponse apiResponse = new ApiResponse(false, "Validation failed", errors);
+        return new ResponseEntity<>(apiResponse, HttpStatus.BAD_REQUEST);
     }
 }

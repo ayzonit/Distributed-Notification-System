@@ -37,6 +37,7 @@ dependencies {
 	testImplementation("org.springframework.kafka:spring-kafka-test")
 	implementation("org.springframework.kafka:spring-kafka")
 	implementation(project(":shared-events"))
+	implementation("org.modelmapper:modelmapper:3.2.0")
 }
 
 //tasks.withType<Test> {

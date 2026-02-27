@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f346eee-5d04-4a63-b62d-9743637d657e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/Config/ModelMapperConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/payload/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/payload/ItemsDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/payload/OrderRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.12/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.12/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/executionHistory/executionHistory.lock" afterDir="false" />
@@ -17,19 +18,24 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.12/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/project/notification_service/controllers/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/project/notification_service/controllers/NotificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/project/notification_service/payload/NotificationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/project/notification_service/payload/NotificationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared-events/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/shared-events/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared-events/build/libs/shared-events-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/shared-events/build/libs/shared-events-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared-events/build/tmp/compileJava/compileTransaction/stash-dir/UserPreferenceEvent$UserPreferenceEventBuilder.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared-events/build/tmp/compileJava/compileTransaction/stash-dir/UserPreferenceEvent.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared-events/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/shared-events/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/controllers/DefaultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/controllers/DefaultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/controllers/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/controllers/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/controllers/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/controllers/ValidationExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/controllers/ValidationExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/kafka/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/kafka/KafkaProducerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/models/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/models/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/payload/OrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/payload/OrderResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/services/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/services/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,13 +131,13 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Ayush/Desktop/Nonchalant1234&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.user-service [bootRun]">
+  <component name="RunManager" selected="Gradle.notification-service [bootRun]">
     <configuration name="notification-service [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -159,7 +165,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/order-service" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" value="--scan --info" />
         <option name="taskDescriptions">
           <list />
         </option>

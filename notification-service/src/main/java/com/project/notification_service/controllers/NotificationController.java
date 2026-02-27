@@ -5,6 +5,7 @@ import com.project.notification_service.payload.NotificationRequest;
 import com.project.notification_service.payload.NotificationResponse;
 import com.project.notification_service.service.Interface.NotificationService;
 import com.project.shared.events.NotificationPriority;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,7 +36,7 @@ public class NotificationController {
     }
 
     @PostMapping
-    public ResponseEntity <NotificationResponse> create(@RequestBody NotificationRequest notification) {
+    public ResponseEntity <NotificationResponse> create(@RequestBody @Valid NotificationRequest notification) {
         NotificationResponse newNotification = notificationService.createNotification(notification);
         return new ResponseEntity<>(newNotification, HttpStatus.CREATED);
     }

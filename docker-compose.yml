@@ -11,7 +11,7 @@ services:
       - redis
       - kafka
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/users
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/user_service_db
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: postgres
       SPRING_REDIS_HOST: redis
@@ -28,11 +28,11 @@ services:
     depends_on:
       - kafka
       - redis
-      - postgres   # ADD THIS
+      - postgres
     environment:
       SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
       SPRING_REDIS_HOST: redis
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/users
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/notification_service_db
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: postgres
     networks:
@@ -49,7 +49,7 @@ services:
       - postgres
     environment:
       SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/users
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/order_service_db
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: postgres
     networks:
@@ -68,7 +68,7 @@ services:
     networks:
       - notification-network
 
-  # ⚡ REDIS CACHE
+  # REDIS CACHE
   redis:
     image: redis:7
     container_name: redis-cache

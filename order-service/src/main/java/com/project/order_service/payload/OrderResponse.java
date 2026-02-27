@@ -1,16 +1,18 @@
 package com.project.order_service.payload;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
-@AllArgsConstructor
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({"success", "message", "data"})
+@Builder
 public class OrderResponse {
-    private Boolean success;
-    private String message;
-    private Object data;
+    private String orderId;
+    private String userId;
+    private String storeId;
+    private List<ItemsDTO> items;
+    private LocalDateTime createdAt;
+    private String status;
 }

@@ -36,7 +36,7 @@ public class OrderServiceImpl implements OrderService{
         logger.info("Received createOrder request from user: {}", order.getUserId());
 
         order.setCreatedAt(LocalDateTime.now());
-        order.setStatus(Status.Placed);
+        order.setStatus(Status.CREATED);
 
         OrderModel savedOrder = orderRepository.save(order);
         logger.info("Saved Order ID: {}", savedOrder.getOrderid());

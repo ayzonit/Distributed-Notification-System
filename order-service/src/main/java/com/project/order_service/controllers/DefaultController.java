@@ -1,6 +1,6 @@
 package com.project.order_service.controllers;
 
-import com.project.order_service.payload.OrderResponse;
+import com.project.order_service.payload.ApiResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,13 +15,13 @@ public class DefaultController {
     private static final Logger logger = LoggerFactory.getLogger(DefaultController.class);
 
     @GetMapping(value = "/health", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<OrderResponse> healthCheck() {
-        OrderResponse orderResponse = new OrderResponse(true, "Service running", null);
-        return new ResponseEntity<>(orderResponse, HttpStatus.OK);
+    public ResponseEntity<ApiResponse> healthCheck() {
+        ApiResponse apiResponse = new ApiResponse(true, "Service running", null);
+        return new ResponseEntity<>(apiResponse, HttpStatus.OK);
     }
 
     @GetMapping("/error")
-    public ResponseEntity<OrderResponse> handleError(HttpServletRequest httpServletRequest) {
+    public ResponseEntity<ApiResponse> handleError(HttpServletRequest httpServletRequest) {
         Integer statusCode = (Integer) httpServletRequest.getAttribute("jakarta.servlet.error.status_code");
         if(statusCode != null) {
             HttpStatus httpStatus = HttpStatus.resolve(statusCode);
@@ -30,9 +30,9 @@ public class DefaultController {
             String message = (String) httpServletRequest.getAttribute("jakarta.servlet.error.message");
             if(httpStatus == HttpStatus.METHOD_NOT_ALLOWED) {
                 logger.warn("405 method not allowed - Method does not exist");
-                OrderResponse orderResponse = new OrderResponse(false,
+                ApiResponse apiResponse = new ApiResponse(false,
                         "405 method not allowed - Method does not exist", null);
-                return new ResponseEntity<>(orderResponse, HttpStatus.METHOD_NOT_ALLOWED);
+                return new ResponseEntity<>(apiResponse, HttpStatus.METHOD_NOT_ALLOWED);
             }
             String errorMessage;
             if(message != null) {
@@ -42,11 +42,11 @@ public class DefaultController {
                 assert httpStatus != null;
                 errorMessage = httpStatus.getReasonPhrase();
             }
-            OrderResponse orderResponse = new OrderResponse(false, errorMessage, null);
-            return new ResponseEntity<>(orderResponse, HttpStatus.valueOf(statusCode));
+            ApiResponse apiResponse = new ApiResponse(false, errorMessage, null);
+            return new ResponseEntity<>(apiResponse, HttpStatus.valueOf(statusCode));
         }
         logger.error("Unexpected error occurred - Returning 500 Internal Server Error");
-        OrderResponse orderResponse = new OrderResponse(false, "An unexpected error occurred", null);
-        return new ResponseEntity<>(orderResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+        ApiResponse apiResponse = new ApiResponse(false, "An unexpected error occurred", null);
+        return new ResponseEntity<>(apiResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
