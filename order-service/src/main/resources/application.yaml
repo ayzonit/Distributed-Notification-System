@@ -5,10 +5,11 @@ spring:
   datasource:
     url: jdbc:postgresql://postgres:5432/order_service_db
     username: postgres
-    password: ayush1234
+    password: postgres
     hikari:
       initializationFailTimeout: 60000
       connectionTimeout: 30000
+
   jpa:
     hibernate:
       ddl-auto: update

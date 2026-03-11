@@ -18,6 +18,8 @@ public class OrderCreatedEvent {
     private String userId;
     private String status;
     private LocalDateTime createdAt;
-    private NotificationPriority priority;
+
+    @Builder.Default
+    private NotificationPriority priority = NotificationPriority.STANDARD;
 
 }

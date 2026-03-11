@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f346eee-5d04-4a63-b62d-9743637d657e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/Config/ModelMapperConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/payload/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/payload/ItemsDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/payload/OrderRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postgres-init/init.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.12/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.12/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.12/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12/checksums/sha1-checksums.bin" afterDir="false" />
@@ -22,19 +19,18 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/project/notification_service/controllers/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/project/notification_service/controllers/NotificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/project/notification_service/payload/NotificationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/project/notification_service/payload/NotificationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load tests/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/load tests/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/project/notification_service/kafka/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/project/notification_service/kafka/KafkaConsumerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/project/notification_service/kafka/OrderEventConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/project/notification_service/kafka/OrderEventConsumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/controllers/DefaultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/controllers/DefaultController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/controllers/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/controllers/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/controllers/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/controllers/ValidationExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/controllers/ValidationExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/kafka/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/kafka/KafkaProducerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/models/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/models/Status.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/payload/OrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/payload/OrderResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/services/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/project/order_service/services/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared-events/build/libs/shared-events-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/shared-events/build/libs/shared-events-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared-events/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/shared-events/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared-events/src/main/java/com/project/shared/events/OrderCreatedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared-events/src/main/java/com/project/shared/events/OrderCreatedEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/project/user_service/kafka/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/project/user_service/kafka/KafkaProducerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +129,7 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Ayush/Desktop/Nonchalant1234&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
@@ -205,9 +201,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.notification-service [bootRun]" />
       <item itemvalue="Gradle.order-service [bootRun]" />
       <item itemvalue="Gradle.user-service [bootRun]" />
+      <item itemvalue="Gradle.notification-service [bootRun]" />
     </list>
     <recent_temporary>
       <list>

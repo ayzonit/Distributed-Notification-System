@@ -16,7 +16,11 @@ public class OrderEventConsumer {
     @Autowired
     NotificationRouter notificationRouter;
 
-    @KafkaListener(topics = "order-created-topic", groupId = "notification-group")
+    @KafkaListener(
+            topics = "order-created-topic",
+            groupId = "notification-group",
+            containerFactory = "kafkaListenerContainerFactory"
+    )
     public void consume(OrderCreatedEvent event) {
 
         logger.info("Received OrderCreatedEvent: eventId {}, orderId {}",
