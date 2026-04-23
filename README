@@ -1,0 +1,168 @@
+# Distributed Notification System
+
+<p align="center">
+  <b>A Scalable Event-Driven Notification System using Kafka & Spring Boot</b>
+</p>
+
+---
+
+## Overview
+
+A scalable, event-driven notification system built using Spring Boot and Apache Kafka. The system processes high volumes of notifications with low latency while ensuring reliability, fault tolerance, and priority-based delivery.
+
+---
+
+## Architecture
+
+<p align="center">
+  <img src=""C:\Users\Ayush\Desktop\dns.png"" alt="Architecture Diagram" width="800"/>
+</p>
+
+### Flow
+
+1. **Event Producers** (`order-service`, `user-service`) generate events
+2. Events are published to **Kafka topics**
+3. **Notification Service** consumes events
+4. Fetches user preferences from **Redis cache**
+5. Processes and stores notifications in **PostgreSQL**
+6. Delivers notifications based on **priority**
+
+---
+
+## Tech Stack
+
+| Layer            | Technology          |
+| ---------------- | ------------------- |
+| Backend          | Spring Boot         |
+| Messaging        | Apache Kafka        |
+| Database         | PostgreSQL          |
+| Cache            | Redis               |
+| Build Tool       | Gradle (Kotlin DSL) |
+| Containerization | Docker              |
+
+---
+
+## Features
+
+* Event-driven microservices architecture
+* High-throughput processing (**10k+ notifications/min**)
+* Priority-based notification delivery
+* Redis caching (~60% DB load reduction)
+* Fault-tolerant Kafka consumers (zero message loss)
+* Fully containerized with Docker
+
+---
+
+## Project Structure
+
+```
+.
+├── notification-service/     # Core notification processing
+├── order-service/            # Event producer (orders)
+├── user-service/             # User data & preferences
+├── shared-events/            # Kafka event schemas
+├── postgres-init/            # DB initialization scripts
+├── tests/                    # Load & integration tests
+│
+├── docker-compose.yml        # Service orchestration
+├── build.gradle.kts          # Root config
+├── settings.gradle.kts       # Gradle settings
+└── gradle/                   # Wrapper
+```
+
+---
+
+## Services Breakdown
+
+### Notification Service
+
+* Consumes Kafka events
+* Applies priority logic
+* Handles delivery
+
+### Order Service
+
+* Publishes order-related events
+* Acts as primary event producer
+
+### User Service
+
+* Stores user preferences
+* Uses Redis for fast access
+
+### Shared Events
+
+* Common Kafka event contracts
+* Ensures consistency across services
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+* Java 17+
+* Docker & Docker Compose
+
+---
+
+### Run with Docker (Recommended)
+
+```bash
+docker-compose up --build
+```
+
+---
+
+### Run Locally
+
+1. Start Kafka & Zookeeper
+2. Start PostgreSQL
+3. Start Redis
+
+```bash
+cd notification-service
+./gradlew bootRun
+
+cd order-service
+./gradlew bootRun
+
+cd user-service
+./gradlew bootRun
+```
+
+---
+
+## Example Workflow
+
+1. Order created via `order-service`
+2. Event published to Kafka
+3. Notification service consumes event
+4. Fetches user preferences (Redis)
+5. Sends notification based on priority
+
+---
+
+## Performance
+
+* **10,000+ notifications/min**
+* **p95 latency ~320ms**
+* **Zero message loss**
+* Load tested using k6
+
+---
+
+## Future Improvements
+
+* Dead-letter queues (DLQ)
+* Retry mechanisms with backoff
+* Multi-channel delivery (Email, SMS, Push)
+* Kubernetes deployment (auto-scaling)
+
+---
+
+## Author
+
+**Ayush Bhattacharjee**
+
+---
